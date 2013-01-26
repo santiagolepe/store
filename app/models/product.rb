@@ -3,9 +3,9 @@ class Product < ActiveRecord::Base
 
   belongs_to :category
 
-  attr_accessible :active, :description, :name, :price
+  attr_accessible :active, :description, :name, :price, :category_id
 
-  validates :name, presence: true
+  validates :name, :category_id, presence: true
 
   def set_defaults
     self.active ||= false
