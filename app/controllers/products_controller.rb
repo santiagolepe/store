@@ -16,4 +16,8 @@ class ProductsController < ApplicationController
     end
    render :new
   end
+
+  def show
+    @product = Product.find_by_id params[:id]
+  end
 end

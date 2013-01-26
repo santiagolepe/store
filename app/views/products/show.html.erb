@@ -1,0 +1,13 @@
+<h1>Product</h1>
+<% if @product.nil? %>
+  <h3>Product not found</h3>
+<% else %>
+  <p>
+  <span>Name: </span><%= @product.name %>
+  </p>
+  <p>
+  <span>Description: </span><%= @product.description %>
+  </p>
+  <p>
+<% end %>
+<%= link_to :back %>
