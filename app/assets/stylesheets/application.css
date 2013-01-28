@@ -11,3 +11,55 @@
  *= require_self
  *= require_tree .
  */
+
+.productL{
+    width: 120px;
+}
+
+.productMain{
+    padding: 25px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    width: 360px;
+}
+.titleNewProduct{
+    margin-left: 50px;
+}
+
+.productForm{
+    padding: 25px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    width: 220px;
+}
+
+.variantList{
+    float: left;
+    padding: 25px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+.product{
+    float: left;
+    padding: 25px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+}
+
+.forVariant{
+    float: left;
+    margin-left: 25px;
+    padding: 25px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+}
+
+.textareProduct{
+    width: 280px;
+    margin-top: 10px;
+}
+
+.rb{
+    margin: 5px;
+}

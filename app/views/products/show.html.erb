@@ -1,17 +1,35 @@
-<h1>Product</h1>
-<% if @product.nil? %>
-  <h3>Product not found</h3>
-<% else %>
-  <p><%= link_to 'Edit', edit_product_path(@product) %></p>
-  <p>
-  <span>Name: </span><%= @product.name %>
-  </p>
-  <p>
-  <span>Category: </span><%= @product.try(:category).try(:name) %>
-  </p>
-  <p>
-  <span>Description: </span><%= @product.description %>
-  </p>
-  <p>
-<% end %>
-<%= link_to 'Back', :back %>
+
+<div class="product">
+    <h3 class="text-warning">Product</h3>
+
+    <% if @product.nil? %>
+      <h3 class="text-error">Product not found</h3>
+    <% else %>
+
+      <p>
+      <span class="btn productL">Name: </span><span class="btn btn-info productL"><%= @product.name %></span>
+      </p>
+      <p>
+      <span class="btn productL">Category: </span><span class="btn btn-success productL"><%= @product.try(:category).try(:name) %></span>
+      </p>
+      <p>
+
+        <textarea class="textareProduct" rows="5"><%= @product.description %></textarea>
+      </p>
+        <%= link_to 'Edit', edit_product_path(@product), :class=>"btn btn-primary" %>    <%= link_to 'Back', products_path, :class=>"btn btn-inverse" %>
+        <br><br><br><br>
+    <% end %>
+
+</div>
+<div class="variantList">
+    <h3>Variants</h3>
+    <%= render @product.variants %>
+</div>
+
+
+<div class="forVariant">
+    <h3 class="text-success">Add variant</h3>
+    <%= render "variants/form" %>
+
+</div>
+

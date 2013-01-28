@@ -1,0 +1,20 @@
+<p>
+  <b><%= link_to 'Delete',  [variant.product, variant],
+                 :confirm => 'Are you sure?',
+                 :method => :delete,:class=>"btn btn-danger" %>
+
+    <% case variant.image
+        when 1%>
+            <a class="btn btn-warning "  href="#"><i class="icon-film icon-white"></i></a>
+        <% when 2 %>
+            <a class="btn btn-warning "  href="#"><i class="icon-book icon-white"></i></a>
+        <% when 3 %>
+            <a class="btn btn-warning "  href="#"><i class="icon-shopping-cart icon-white"></i></a>
+    <% end %>
+
+
+    <span class="text-info">Color: </span><%=variant.color %><span class="text-info"> Size: </span>
+    <%=variant.size%><span class="text-info"> Nationality: </span><%= variant.nationality %>
+    </b>
+</p>
+
